@@ -1,10 +1,7 @@
 package com.cloudboundstudioz.capstoneprojectserver.domain.user.models;
 
 import com.cloudboundstudioz.capstoneprojectserver.domain.profile.models.Profile;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
@@ -14,7 +11,7 @@ import lombok.RequiredArgsConstructor;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @Data
-public class User {
+public class UserModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,5 +27,7 @@ public class User {
     private String password;
 
     @NonNull
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "profile_id", referencedColumnName = "id")
     private Profile profile;
 }

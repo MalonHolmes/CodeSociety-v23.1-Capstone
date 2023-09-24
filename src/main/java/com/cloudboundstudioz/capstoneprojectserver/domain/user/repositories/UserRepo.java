@@ -1,12 +1,11 @@
 package com.cloudboundstudioz.capstoneprojectserver.domain.user.repositories;
 
-import com.cloudboundstudioz.capstoneprojectserver.domain.user.models.User;
+import com.cloudboundstudioz.capstoneprojectserver.domain.user.models.UserModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
 
-public interface UserRepo extends JpaRepository<User, Long> {
-    Optional<User> findById(String email);
-    Optional<User> findByUsername(String username);
-    Optional<User> findByEmail(String email);
+public interface UserRepo extends JpaRepository<UserModel, Long> {
+    Optional<UserModel> findByUsername(String username);
+    Optional<UserModel> findByEmail(String email);
 }

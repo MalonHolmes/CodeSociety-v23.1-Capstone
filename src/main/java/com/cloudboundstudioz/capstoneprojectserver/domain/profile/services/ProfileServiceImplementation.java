@@ -4,7 +4,6 @@ import com.cloudboundstudioz.capstoneprojectserver.domain.core.exceptions.Resour
 import com.cloudboundstudioz.capstoneprojectserver.domain.core.exceptions.ResourceNotFoundException;
 import com.cloudboundstudioz.capstoneprojectserver.domain.profile.models.Profile;
 import com.cloudboundstudioz.capstoneprojectserver.domain.profile.repositories.ProfileRepo;
-import com.cloudboundstudioz.capstoneprojectserver.domain.user.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +22,7 @@ public class ProfileServiceImplementation implements ProfileService {
     // CREATE methods
     @Override
     public Profile create(Profile profile) throws ResourceCreationException {
-        Optional<Profile> optional = profileRepo.findById(profile.getId());
+        Optional<Profile> optional = profileRepo.findByName(profile.getName());
         if (optional.isPresent())
             throw new ResourceCreationException("Profile already exists");
         profile = profileRepo.save(profile);
@@ -35,6 +34,13 @@ public class ProfileServiceImplementation implements ProfileService {
     public Profile getById(Long id) throws ResourceNotFoundException {
         Profile profile = profileRepo.findById(id)
                 .orElseThrow(()->new ResourceNotFoundException("No Profile with id: " + id));
+        return profile;
+    }
+
+    @Override
+    public Profile getByName(String name) throws ResourceNotFoundException {
+        Profile profile = profileRepo.findByName(name)
+                .orElseThrow(()->new ResourceNotFoundException("No Profile with name: " + name));
         return profile;
     }
 
