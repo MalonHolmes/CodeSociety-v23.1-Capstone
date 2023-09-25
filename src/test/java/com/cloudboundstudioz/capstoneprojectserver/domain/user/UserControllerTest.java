@@ -35,7 +35,7 @@ public class UserControllerTest {
 
     @Test
     @DisplayName("User Controller: Create User - Success")
-    void createUserTest01() {
+    public void createUserTest01() {
 
         when(userService.create(any())).thenReturn(testUser);
 
@@ -47,7 +47,7 @@ public class UserControllerTest {
 
     @Test
     @DisplayName("User Controller: Create User - Fail")
-    void testCreateFails() {
+    public void testCreateFails() {
 
         when(userService.create(any()))
                 .thenThrow(new ResourceCreationException("Create failed"));
@@ -60,7 +60,7 @@ public class UserControllerTest {
 
     @Test
     @DisplayName("User Controller: Get User By Id - Success")
-    void getUserByIdTest01() {
+    public void getUserByIdTest01() {
 
         UserModel mockUser = new UserModel();
 
@@ -74,7 +74,7 @@ public class UserControllerTest {
 
     @Test
     @DisplayName("User Controller: Get User By Id - Fail")
-    void getUserByIdTest02() {
+    public void getUserByIdTest02() {
 
         when(userService.getById(1L))
                 .thenThrow(new ResourceNotFoundException("User not found!"));
