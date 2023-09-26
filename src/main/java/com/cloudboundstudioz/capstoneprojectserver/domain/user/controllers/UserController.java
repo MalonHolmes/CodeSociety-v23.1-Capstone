@@ -42,7 +42,17 @@ public class UserController {
     }
 
     // TODO - getByEmail() and getByUsername()??
-    // Dont need them because it's all included in the id
+    @GetMapping("email")
+    public ResponseEntity<UserModel> getByEmail(@RequestParam String email) {
+        UserModel userModel = userService.getByEmail(email);
+        return new ResponseEntity<>(userModel, HttpStatus.OK);
+    }
+
+    @GetMapping("username")
+    public ResponseEntity<UserModel> getByUsername(@RequestParam String username) {
+        UserModel userModel = userService.getByUsername(username);
+        return new ResponseEntity<>(userModel, HttpStatus.OK);
+    }
 
     // PUT requests
     @PutMapping("{id}")
