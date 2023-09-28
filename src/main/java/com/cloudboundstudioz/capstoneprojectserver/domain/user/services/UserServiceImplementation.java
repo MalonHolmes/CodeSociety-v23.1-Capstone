@@ -64,11 +64,7 @@ public class UserServiceImplementation implements UserService {
 
     @Override
     public UserModel updateUser(Long id, UserModel newUserModel) throws ResourceNotFoundException {
-        UserModel userModel = getById(id);
-        userModel.setEmail(newUserModel.getEmail());
-        userModel.setUsername(newUserModel.getUsername());
-        userModel.setPassword(newUserModel.getPassword());
-        userModel.setProfile(newUserModel.getProfile());
+        UserModel userModel = newUserModel;
         return userModel;
     }
 

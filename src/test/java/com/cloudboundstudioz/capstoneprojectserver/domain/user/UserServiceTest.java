@@ -6,7 +6,6 @@ import com.cloudboundstudioz.capstoneprojectserver.domain.profile.models.Profile
 import com.cloudboundstudioz.capstoneprojectserver.domain.user.models.UserModel;
 import com.cloudboundstudioz.capstoneprojectserver.domain.user.repositories.UserRepo;
 import com.cloudboundstudioz.capstoneprojectserver.domain.user.services.UserService;
-import org.apache.catalina.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -46,7 +45,7 @@ public class UserServiceTest {
     @BeforeEach
     public void setup() {
         testProfile = new Profile("Lonny Love", 23, 68.5, 145.2);
-        mockUser1 = new UserModel("CloudBound", "cloud@bound.com", "clbd", testProfile);
+        mockUser1 = new UserModel("CloudBound", "cloud@bound.com", "clbd");
         mockUserExpected = mockUser1;
         mockUserActual = new UserModel();
     }
@@ -57,7 +56,7 @@ public class UserServiceTest {
     public void createUserTest01(){ // When I try to create a user, that exact user is successfully created
 
         BDDMockito.doReturn(mockUserExpected).when(testRepo).save(ArgumentMatchers.any());
-        mockUserActual = new UserModel("CloudBound", "cloud@bound.com", "clbd", testProfile);
+        mockUserActual = new UserModel("CloudBound", "cloud@bound.com", "clbd");
         assertNotNull(mockUserActual);
         assertEquals(mockUserExpected, mockUserActual);
     }
@@ -205,8 +204,7 @@ public class UserServiceTest {
         UserModel updatedUser =
                 new UserModel("CloudBound_Update",
                         "update@update.com",
-                        "update",
-                        testProfile);
+                        "update");
         updatedUser.setId(1L);
 
         BDDMockito.when(testRepo.save(updatedUser)).thenReturn(updatedUser);

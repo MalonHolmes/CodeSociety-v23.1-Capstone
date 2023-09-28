@@ -38,7 +38,6 @@ public class ProfileServiceTest {
 
     @Test
     public void createProfileTest(){
-//        BDDMockito.doReturn(null).when(profileRepo).findByName(ArgumentMatchers.any());
         BDDMockito.doReturn(returnedProfile).when(profileRepo).save(ArgumentMatchers.any());
         Profile newProfile = profileService.create(new Profile("Miles Morales", 17, 58.4, 130.2));
         newProfile.setId(1L);

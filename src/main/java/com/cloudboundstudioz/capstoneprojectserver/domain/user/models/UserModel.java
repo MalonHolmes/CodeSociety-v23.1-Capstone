@@ -26,7 +26,6 @@ public class UserModel {
     @NonNull
     private String password;
 
-    @NonNull
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "profile_id", referencedColumnName = "id")
     private Profile profile;
