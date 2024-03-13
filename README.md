@@ -2,7 +2,7 @@
 
 [![Design Outline](Presentation.png)](Presentation.png)
 
-Google Doc: https://docs.google.com/document/d/1BLjdCsO0Ekqtcq12JdOeMl2thNCkg2QvJdwxypEtHFo/edit?usp=sharing
+Notes: https://docs.google.com/document/d/1BLjdCsO0Ekqtcq12JdOeMl2thNCkg2QvJdwxypEtHFo/edit?usp=sharing
 ## Outine
 
 [![Design Outline](HealthWidgetsPortal.png)](HealthWidgetsPortal.png)
