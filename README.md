@@ -1,6 +1,10 @@
 # CodeSociety-v23.1-Capstone Outline
 
 Google Doc: https://docs.google.com/document/d/1BLjdCsO0Ekqtcq12JdOeMl2thNCkg2QvJdwxypEtHFo/edit?usp=sharing
+## Outine
+
+[![Design Outline](HealthWidgetsPortal.png)](HealthWidgetsPortal.png)
+
 
 ## Overview 
 The Dashboard is a web app that acts as an all-in-one center hub for everything health-related. Whether you’re trying to get your weight up in the gym, meditate, or get your sleep schedule back on track, this dashboard will help you start healthy habits and be your best self physically and mentally. Users can see their stats for their fitness goals, getting reminders to workout or drink water, finding diets/recipes to fit their lifestyle, seeing motivational quotes, mindfulness tips, etc. Everything health, good vibes, and positivity is here.
