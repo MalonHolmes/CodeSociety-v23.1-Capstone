@@ -1,4 +1,6 @@
-# CodeSociety-v23.1-Capstone Outline
+# CodeSociety-v23.1-Capstone
+
+[![Design Outline](Presentation.png)](Presentation.png)
 
 Google Doc: https://docs.google.com/document/d/1BLjdCsO0Ekqtcq12JdOeMl2thNCkg2QvJdwxypEtHFo/edit?usp=sharing
 ## Outine
