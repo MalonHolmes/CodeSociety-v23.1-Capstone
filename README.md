@@ -3,7 +3,7 @@
 [![Design Outline](Presentation.png)](Presentation.png)
 
 Notes: https://docs.google.com/document/d/1BLjdCsO0Ekqtcq12JdOeMl2thNCkg2QvJdwxypEtHFo/edit?usp=sharing
-## Outine
+## Design Outine
 
 [![Design Outline](HealthWidgetsPortal.png)](HealthWidgetsPortal.png)
 
