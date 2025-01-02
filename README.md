@@ -1,4 +1,4 @@
-# CodeSociety-v23.1-Capstone
+# CodeSociety v23.1 Capstone - Health Widgets Portal
 
 [![Design Outline](Presentation.png)](Presentation.png)
 
